@@ -101,7 +101,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin, onBack, moduleNam
 
           <div className="pt-6 text-center border-t border-slate-100">
             <p className="text-[9px] text-slate-400 font-bold uppercase tracking-widest">
-              Secured by Bharat Battery Global IT Infrastructure
+              Secured by Electra EV
             </p>
           </div>
         </div>

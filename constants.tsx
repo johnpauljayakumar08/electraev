@@ -118,6 +118,6 @@ export const REVENUE_BY_TYPE = [
 // External links for modules that should open outside the app
 export const EXTERNAL_LINKS: { [key: string]: string } = {
   production: 'https://production-dashboard-theta.vercel.app/',
-  // set inventory to empty by default — update with actual URL if available
-  inventory: ''
+  // Inventory external dashboard
+  inventory: 'https://magnificent-cat-e056be.netlify.app/'
 };

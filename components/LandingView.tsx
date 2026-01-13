@@ -46,7 +46,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onSelect }) => {
           <div className="inline-block px-4 py-1.5 bg-indigo-50 border border-indigo-100 rounded-full">
             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-indigo-600">Enterprise Resource Planning</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-black tracking-tighter text-slate-900">Bharat Battery <span className="text-indigo-600">Hub</span></h1>
+          <h1 className="text-5xl md:text-6xl font-black tracking-tighter text-slate-900">Electra <span className="text-indigo-600">EV</span></h1>
           <p className="text-slate-500 text-lg font-medium max-w-2xl mx-auto">Unified ecosystem for manufacturing, logistics, and vendor management. Select a module to begin.</p>
         </div>
 
@@ -82,7 +82,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onSelect }) => {
         </div>
 
         <div>
-          <p className="text-[10px] font-black uppercase tracking-widest">© 2026 Bharat Battery Solutions Pvt Ltd.</p>
+          <p className="text-[10px] font-black uppercase tracking-widest">© 2026 Electra EVs Pvt Ltd.</p>
         </div>
       </div>
     </div>

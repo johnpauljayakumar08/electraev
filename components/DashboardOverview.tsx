@@ -54,7 +54,7 @@ export const DashboardOverview: React.FC = () => {
       {/* Top Welcome Section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <h2 className="text-2xl font-black text-slate-800 tracking-tight">Bharat Battery Solutions</h2>
+          <h2 className="text-2xl font-black text-slate-800 tracking-tight">Electra EVs</h2>
           <p className="text-slate-500 mt-1 text-sm font-bold uppercase tracking-widest flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             Supplier Dashboard • VoltCore Network

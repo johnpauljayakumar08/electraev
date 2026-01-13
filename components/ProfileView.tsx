@@ -8,7 +8,7 @@ export const ProfileView: React.FC = () => {
         <div className="h-40 bg-slate-900 relative">
           <div className="absolute -bottom-14 left-10 w-28 h-28 rounded-3xl bg-white p-1.5 shadow-xl border border-slate-100">
              <div className="w-full h-full bg-indigo-600 rounded-2xl flex items-center justify-center text-white text-2xl font-black">
-               BB
+               EE
              </div>
           </div>
           <div className="absolute bottom-4 right-8 flex gap-2">
@@ -19,7 +19,7 @@ export const ProfileView: React.FC = () => {
         <div className="pt-20 pb-10 px-10">
            <div className="flex justify-between items-start mb-10">
              <div>
-               <h2 className="text-3xl font-black text-slate-900 tracking-tight">Bharat Battery Solutions</h2>
+               <h2 className="text-3xl font-black text-slate-900 tracking-tight">Electra EVs</h2>
                <p className="text-slate-500 font-bold text-lg mt-1">Tier 1 Strategic Manufacturing Partner</p>
                <div className="flex gap-4 mt-4">
                   <span className="text-[10px] font-black uppercase bg-slate-100 text-slate-500 px-3 py-1.5 rounded-full border border-slate-200">PAN: BRTXXXX88G</span>
@@ -40,7 +40,7 @@ export const ProfileView: React.FC = () => {
                <h3 className="text-[11px] font-black text-slate-400 uppercase tracking-[0.2em] border-b border-slate-100 pb-3">Entity Details</h3>
                <div className="space-y-5">
                  {[
-                   { label: 'Registered Name', val: 'Bharat Battery Solutions Pvt Ltd.' },
+                   { label: 'Registered Name', val: 'Electra EVs Pvt Ltd.' },
                    { label: 'Business Type', val: 'Large Scale Enterprise (LSE)' },
                    { label: 'MSME Status', val: 'Registered (Udyam-229)' },
                    { label: 'HQ Location', val: 'Industrial Area, Pune, MH' },

@@ -28,7 +28,7 @@ export const Header: React.FC<HeaderProps> = ({ activeView, setIsSidebarOpen, is
            <h1 className="text-lg font-black text-slate-800 capitalize tracking-tight leading-none">
              {activeView.toLowerCase().replace('_', ' ')}
            </h1>
-           <p className="text-[9px] font-black text-slate-400 uppercase tracking-[0.15em] mt-1">Bharat Battery Hub</p>
+           <p className="text-[9px] font-black text-slate-400 uppercase tracking-[0.15em] mt-1">Electra EV</p>
         </div>
       </div>
 
@@ -85,11 +85,11 @@ export const Header: React.FC<HeaderProps> = ({ activeView, setIsSidebarOpen, is
 
         <div className="flex items-center gap-4 pl-5 border-l border-slate-100">
           <div className="hidden lg:block text-right">
-            <p className="text-xs font-black text-slate-800 leading-none mb-1">Bharat Battery Solutions</p>
+            <p className="text-xs font-black text-slate-800 leading-none mb-1">Electra EVs</p>
             <p className="text-[10px] text-emerald-600 font-black uppercase tracking-widest">Active Supplier</p>
           </div>
           <div className="w-10 h-10 rounded-2xl bg-indigo-600 border-2 border-white shadow-md flex items-center justify-center text-white font-black text-xs cursor-pointer hover:rotate-6 transition-all active:scale-90">
-            BB
+            EE
           </div>
         </div>
       </div>

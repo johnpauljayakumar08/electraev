@@ -114,3 +114,10 @@ export const REVENUE_BY_TYPE = [
   { category: 'Residential Storage', amount: 17000000, percent: 17 },
   { category: 'Other', amount: 4100000, percent: 4 },
 ];
+
+// External links for modules that should open outside the app
+export const EXTERNAL_LINKS: { [key: string]: string } = {
+  production: 'https://production-dashboard-theta.vercel.app/',
+  // set inventory to empty by default — update with actual URL if available
+  inventory: ''
+};

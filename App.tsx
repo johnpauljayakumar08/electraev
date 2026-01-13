@@ -15,6 +15,7 @@ import { ProcessFlowView } from './components/ProcessFlowView';
 import { LandingView } from './components/LandingView';
 import { LoginView } from './components/LoginView';
 import { ViewType } from './types';
+import { EXTERNAL_LINKS } from './constants';
 
 const App: React.FC = () => {
   const [activeView, setActiveView] = useState<ViewType>('LANDING');
@@ -36,6 +37,17 @@ const App: React.FC = () => {
   }, []);
 
   const handleModuleSelect = (module: string) => {
+    // For some modules we open an external dashboard in a new tab instead
+    if (module === 'production') {
+      window.open(EXTERNAL_LINKS.production, '_blank', 'noopener,noreferrer');
+      return;
+    }
+
+    if (module === 'inventory' && EXTERNAL_LINKS.inventory) {
+      window.open(EXTERNAL_LINKS.inventory, '_blank', 'noopener,noreferrer');
+      return;
+    }
+
     setSelectedModule(module);
     setActiveView('LOGIN');
   };

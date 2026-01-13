@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { ViewType } from '../types';
-import logo from '../assets/electra-EV.png';
 
 interface SidebarProps {
   activeView: ViewType;
@@ -36,8 +35,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView, isO
 
       <aside className={`fixed inset-y-0 left-0 w-64 bg-slate-900 text-white transform transition-transform duration-300 ease-in-out z-30 flex flex-col ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <div className="p-6 flex items-center gap-3">
-          <div className="w-48 h-14 flex items-center justify-center bg-white/5 rounded-lg shadow-lg shadow-indigo-500/10">
-            <img src={logo} alt="Electra EV" className="w-82 h-12 object-contain" />
+          <div className="w-14 h-14 flex items-center justify-center bg-white/5 rounded-lg shadow-lg shadow-indigo-500/10">
+            <img src={new URL('../assets/electra-EV.png', import.meta.url).href} alt="Electra EV" className="w-12 h-12 object-contain" />
           </div>
         </div>
 

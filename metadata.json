@@ -1,0 +1,8 @@
+{
+  "name": "SupplierCore Enterprise",
+  "description": "A premium, data-driven supplier dashboard for enterprise procurement and supply chain management, featuring order tracking, inventory alerts, and financial analytics.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

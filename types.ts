@@ -118,4 +118,4 @@ export interface GenealogyReport {
   };
 }
 
-export type ViewType = 'OVERVIEW' | 'ORDERS' | 'ASN' | 'INVENTORY' | 'QUALITY' | 'PAYMENTS' | 'PROFILE' | 'GENEALOGY' | 'FLOW';
+export type ViewType = 'LANDING' | 'LOGIN' | 'OVERVIEW' | 'ORDERS' | 'ASN' | 'INVENTORY' | 'QUALITY' | 'PAYMENTS' | 'PROFILE' | 'GENEALOGY' | 'FLOW' | 'ANALYTICS';

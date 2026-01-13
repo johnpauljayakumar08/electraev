@@ -12,11 +12,14 @@ import { ASNView } from './components/ASNView';
 import { QualityView } from './components/QualityView';
 import { GenealogyView } from './components/GenealogyView';
 import { ProcessFlowView } from './components/ProcessFlowView';
+import { LandingView } from './components/LandingView';
+import { LoginView } from './components/LoginView';
 import { ViewType } from './types';
 
 const App: React.FC = () => {
-  const [activeView, setActiveView] = useState<ViewType>('OVERVIEW');
+  const [activeView, setActiveView] = useState<ViewType>('LANDING');
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [selectedModule, setSelectedModule] = useState<string | null>(null);
 
   // Responsive sidebar handling
   useEffect(() => {
@@ -31,6 +34,55 @@ const App: React.FC = () => {
     handleResize();
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const handleModuleSelect = (module: string) => {
+    setSelectedModule(module);
+    setActiveView('LOGIN');
+  };
+
+  const handleLoginSuccess = () => {
+    setActiveView('OVERVIEW');
+  };
+
+  const handleLogout = () => {
+    setActiveView('LANDING');
+    setSelectedModule(null);
+  };
+
+  const renderContent = () => {
+    switch (activeView) {
+      case 'LANDING':
+        return <LandingView onSelect={handleModuleSelect} />;
+      case 'LOGIN':
+        return (
+          <LoginView 
+            onLogin={handleLoginSuccess} 
+            onBack={() => setActiveView('LANDING')} 
+            moduleName={selectedModule || 'System'}
+          />
+        );
+      default:
+        return (
+          <div className="flex h-screen bg-slate-50 overflow-hidden font-sans text-slate-900">
+            <Sidebar 
+              activeView={activeView} 
+              setActiveView={setActiveView} 
+              isOpen={isSidebarOpen} 
+              setIsOpen={setIsSidebarOpen}
+              onLogout={handleLogout}
+            />
+            
+            <div className={`flex-1 flex flex-col min-w-0 transition-all duration-300 ${isSidebarOpen ? 'lg:ml-64' : 'ml-0'}`}>
+              <Header activeView={activeView} setIsSidebarOpen={setIsSidebarOpen} isSidebarOpen={isSidebarOpen} />
+              
+              <main className="flex-1 overflow-y-auto p-4 md:p-8 space-y-8 animate-in fade-in duration-500">
+                {renderView()}
+              </main>
+            </div>
+          </div>
+        );
+    }
+  };
 
   const renderView = () => {
     switch (activeView) {
@@ -49,21 +101,8 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen bg-slate-50 overflow-hidden font-sans text-slate-900">
-      <Sidebar 
-        activeView={activeView} 
-        setActiveView={setActiveView} 
-        isOpen={isSidebarOpen} 
-        setIsOpen={setIsSidebarOpen}
-      />
-      
-      <div className={`flex-1 flex flex-col min-w-0 transition-all duration-300 ${isSidebarOpen ? 'lg:ml-64' : 'ml-0'}`}>
-        <Header activeView={activeView} setIsSidebarOpen={setIsSidebarOpen} isSidebarOpen={isSidebarOpen} />
-        
-        <main className="flex-1 overflow-y-auto p-4 md:p-8 space-y-8 animate-in fade-in duration-500">
-          {renderView()}
-        </main>
-      </div>
+    <div className="w-full min-h-screen bg-slate-50 font-sans text-slate-900">
+      {renderContent()}
     </div>
   );
 };
